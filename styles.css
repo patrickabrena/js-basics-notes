@@ -1,0 +1,28 @@
+container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+container > * {
+  height: 90vh;
+  border: solid black 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.array1 {
+  background-color: aqua;
+  flex: 1;
+}
+
+.array2 {
+  background-color: beige;
+  flex: 1;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
