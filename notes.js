@@ -1,3 +1,174 @@
+/*Javascript-Basics-FCC */
+/*******UNCOMMENT FUNCTION CALLS TO VIEW IN BROWSER CONSOLE********/
+//
+//
+//
+
+const AssignOneVariableToAnother = () => {
+  /* Assigning the Value of One Variable to Another*/
+  //Assign the contents of a to variable b
+  //Setup
+  var a;
+  a = 7;
+  var b;
+  b = a;
+  console.log(b);
+};
+// AssignOneVariableToAnother();
+
+const UnderstandingUninitializedVariables = () => {
+  //-when js varioables are delcared, they haave intial val of undefined
+  //-math operation on undefined variable will result in NaN
+  //-concatenate a string with undefined var string will be undefined
+
+  /*Initialize the three variables a, b, d with 5, 10 and "i am a"
+  respectively so that they will not be undefined */
+  const setupDONTmodify = () => {
+    //only change code below this line
+    var a;
+    var b;
+    var c;
+    //only change code above this line
+
+    a = a + 1;
+    b = b + 5;
+    c = c + "string!";
+  };
+  setupDONTmodify();
+
+  const codeToModify = () => {
+    //only change code below this line
+    var a = 5; //initializing variables
+    var b = 10;
+    var c = "I am a";
+    //only change code above this line
+
+    a = a + 1;
+    b = b + 5;
+    c = c + " string!";
+    console.log(a, b, c);
+  };
+  codeToModify();
+};
+// UnderstandingUninitializedVariables();
+
+const DifferenceBetweenLetAndVar = () => {
+  // with var you can redeclare variables
+  const varExample = () => {
+    var camper = "James";
+    var camper = "David";
+    console.log(camper);
+  };
+  varExample();
+  /*In larger codebase you might overwrite a variable that you
+  didn't mean to. behaviour doesn't throw an error so it's
+  hard for bug fixes */
+  const letExample = () => {
+    // let camper = "James";
+    // let camper = "David"; // you can already see red-underline
+    console.log(camper);
+    /*in browser console, this is the error
+        Uncaught SyntaxError: redeclaration of let campernotes.js:68:9note: Previously declared at line 67, column 9 */
+  };
+  // letExample();
+};
+// DifferenceBetweenLetAndVar();
+
+const DeclareReadOnlyVariableWithConstKeyword = () => {
+  //NOTE= common practice for devs to name consts with all UPPERCASE_SNAKE syntax
+  const SETUP = () => {
+    var fCC = "freeCodeCamp";
+    var fact = "is cool!";
+    fact = "is awesome!";
+    console.log(fCC, fact);
+  };
+  SETUP();
+  /*Change the code so that all the variables are declared using
+LET or CONST */
+  const MODIFIED_CODE = () => {
+    const FCC = "freeCodeCamp"; // Change this line
+    let fact = "is cool!"; // Change this line
+    fact = "is awesome!";
+    console.log(FCC, fact); // Change this line
+  };
+  MODIFIED_CODE();
+};
+DeclareReadOnlyVariableWithConstKeyword();
+
+const CompoundAssignmentWithAugmentedAddition = () => {
+  /*IN Programming, it is common to use assignments to modify the contents of a variable */
+  /*Use the += operator instead of
+  -  myVar = myVar + 1
+  - will be myVar += 1 */
+  //
+  //
+  //
+  /*other operators with augmented operations are
+  - subtraction -=
+  - multiplication *=
+  - division /= */
+};
+CompoundAssignmentWithAugmentedAddition();
+
+const EscapeSequencesInStrings = () => {
+  /*Escape sequyences allow you to use characters you may not otherwise be able to use in a string */
+  //
+  //
+  //
+  /*Code and Ouput */
+  // \' --- single quote
+  // \" --- double quote
+  // \\ --- backslash
+  // \n --- newline
+  // \t --- tab
+  // \r --- carriage return
+  // \b --- backspace
+  // \f --- form feed
+  const ESCAPED_SEQUENCES = () => {
+    const myStr = "FirstLine\n \t \\Secondline\n ThirdLine";
+    console.log(myStr);
+  };
+  ESCAPED_SEQUENCES();
+};
+EscapeSequencesInStrings();
+
+const ConcatenatingStringWithPlusOperator = () => {
+  /*can you += just like with nums */
+  let ourStr = "I come first then ";
+  ourStr += "I come second";
+  console.log(ourStr);
+};
+ConcatenatingStringWithPlusOperator();
+
+const AppendingVariablesToStrings = () => {
+  /*You can also append variables to a string using += */
+  const anAdjective = "awesome!";
+  let ourStr = "freeCodeCamp is ";
+  let result = (ourStr += anAdjective);
+  console.log(result);
+};
+AppendingVariablesToStrings();
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+//past notes below
 function containedExample() {
   const demoArray = [1, 2, 3, 4, 5];
 
@@ -56,7 +227,7 @@ function RandomNumWithRange(smol, tol) {
   return Math.floor(Math.random() * (tol - smol) + 1) + smol;
 }
 
-console.log(RandomNumWithRange(5, 15));
+// console.log(RandomNumWithRange(5, 15));
 
 /*
 -
@@ -131,8 +302,8 @@ function updateGameInfoMeta(games, title, platform, prop, value) {
 }
 updateGameInfoMeta(gameCollection, "ageOfEmpiresII", "pc", "genre", "CRPG :)");
 
-console.log(JSON.stringify(gameCollection, null, 2));
-console.log(gameCollection);
+// console.log(JSON.stringify(gameCollection, null, 2));
+// console.log(gameCollection);
 
 /*
 -
