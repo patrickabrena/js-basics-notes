@@ -149,6 +149,87 @@ const AppendingVariablesToStrings = () => {
 };
 AppendingVariablesToStrings();
 
+const understandStringImmutability = () => {
+  let myStr = "Bob";
+  myStr[0] = "J";
+  //will still console.log "Bob" because string values are immutable
+  console.log(myStr);
+};
+understandStringImmutability();
+
+const bracketNotationToFindLastCharacterInString = () => {
+  const firstName = "Ada";
+  const lasatLetter = firstName[firstName.length - 1]; //has to be  - 1 because index starts at 0
+  console.log(lasatLetter);
+};
+bracketNotationToFindLastCharacterInString();
+
+const storeMultipleVariablesUsingJSArrays = () => {
+  const myArray = ["bread", 23];
+  console.log(myArray);
+};
+storeMultipleVariablesUsingJSArrays();
+
+const nestOneArrayWithinAnother = () => {
+  const teams = [
+    ["Bulls", 23],
+    ["Lakers", 8],
+  ];
+  console.log(teams);
+};
+nestOneArrayWithinAnother();
+
+const accessMultiDimensionalArrWithIndexes = () => {
+  const myArray = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [[10, 11, 12], 13, 14],
+  ];
+  const myData = myArray[3][0]; // will display the 4th index "[3]"
+  const innerData = myArray[3][0][2]; // will display
+  console.log(myData);
+  console.log(innerData);
+};
+accessMultiDimensionalArrWithIndexes();
+
+const manipulateArraysWithPushMethod = () => {
+  const arr1 = [1, 2, 3];
+  arr1.push(4, 5);
+
+  const arr2 = ["Stimpson", "J", "cat"];
+  arr2.push(["happy", "joy"]);
+  console.log(arr1, arr2);
+};
+manipulateArraysWithPushMethod();
+
+const manipulateArraysWithPopMethod = () => {
+  //.pop method is used to pop a value off the end of an array.
+  //can store this popped off val by assigning it to a variable
+  const myArr = [1, 4, 6];
+  console.log(myArr); //this will show all 3 elements in arr because the pop hasn't happened yet
+  const poppedElement = myArr.pop();
+  console.log(poppedElement);
+  console.log(myArr); //this will show the updated myArr after the pop method has been used
+};
+manipulateArraysWithPopMethod();
+
+const manipulateArraysWithShiftMethod = () => {
+  //shift method removes first element of array and shifts it to another array stored as a variable
+  const ourArray = ["Stimpson", "J", ["cat"]];
+  const removedFromOurArray = ourArray.shift();
+  console.log(removedFromOurArray);
+};
+manipulateArraysWithShiftMethod();
+
+const manipulateArraysWithUnshiftMethod = () => {
+  //unshift adds elements to the beginning of the array
+  const ourArray = ["Stimpson", "J", "cat"];
+  ourArray.shift();
+  ourArray.unshift("Happy");
+  console.log(ourArray);
+};
+manipulateArraysWithUnshiftMethod();
 //
 //
 //
