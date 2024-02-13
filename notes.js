@@ -93,7 +93,7 @@ LET or CONST */
   };
   MODIFIED_CODE();
 };
-DeclareReadOnlyVariableWithConstKeyword();
+// DeclareReadOnlyVariableWithConstKeyword();
 
 const CompoundAssignmentWithAugmentedAddition = () => {
   /*IN Programming, it is common to use assignments to modify the contents of a variable */
@@ -108,7 +108,7 @@ const CompoundAssignmentWithAugmentedAddition = () => {
   - multiplication *=
   - division /= */
 };
-CompoundAssignmentWithAugmentedAddition();
+// CompoundAssignmentWithAugmentedAddition();
 
 const EscapeSequencesInStrings = () => {
   /*Escape sequyences allow you to use characters you may not otherwise be able to use in a string */
@@ -130,7 +130,7 @@ const EscapeSequencesInStrings = () => {
   };
   ESCAPED_SEQUENCES();
 };
-EscapeSequencesInStrings();
+// EscapeSequencesInStrings();
 
 const ConcatenatingStringWithPlusOperator = () => {
   /*can you += just like with nums */
@@ -138,7 +138,7 @@ const ConcatenatingStringWithPlusOperator = () => {
   ourStr += "I come second";
   console.log(ourStr);
 };
-ConcatenatingStringWithPlusOperator();
+// ConcatenatingStringWithPlusOperator();
 
 const AppendingVariablesToStrings = () => {
   /*You can also append variables to a string using += */
@@ -147,7 +147,7 @@ const AppendingVariablesToStrings = () => {
   let result = (ourStr += anAdjective);
   console.log(result);
 };
-AppendingVariablesToStrings();
+// AppendingVariablesToStrings();
 
 const understandStringImmutability = () => {
   let myStr = "Bob";
@@ -155,20 +155,20 @@ const understandStringImmutability = () => {
   //will still console.log "Bob" because string values are immutable
   console.log(myStr);
 };
-understandStringImmutability();
+// understandStringImmutability();
 
 const bracketNotationToFindLastCharacterInString = () => {
   const firstName = "Ada";
   const lasatLetter = firstName[firstName.length - 1]; //has to be  - 1 because index starts at 0
   console.log(lasatLetter);
 };
-bracketNotationToFindLastCharacterInString();
+// bracketNotationToFindLastCharacterInString();
 
 const storeMultipleVariablesUsingJSArrays = () => {
   const myArray = ["bread", 23];
   console.log(myArray);
 };
-storeMultipleVariablesUsingJSArrays();
+// storeMultipleVariablesUsingJSArrays();
 
 const nestOneArrayWithinAnother = () => {
   const teams = [
@@ -177,7 +177,7 @@ const nestOneArrayWithinAnother = () => {
   ];
   console.log(teams);
 };
-nestOneArrayWithinAnother();
+// nestOneArrayWithinAnother();
 
 const accessMultiDimensionalArrWithIndexes = () => {
   const myArray = [
@@ -191,7 +191,7 @@ const accessMultiDimensionalArrWithIndexes = () => {
   console.log(myData);
   console.log(innerData);
 };
-accessMultiDimensionalArrWithIndexes();
+// accessMultiDimensionalArrWithIndexes();
 
 const manipulateArraysWithPushMethod = () => {
   const arr1 = [1, 2, 3];
@@ -201,7 +201,7 @@ const manipulateArraysWithPushMethod = () => {
   arr2.push(["happy", "joy"]);
   console.log(arr1, arr2);
 };
-manipulateArraysWithPushMethod();
+// manipulateArraysWithPushMethod();
 
 const manipulateArraysWithPopMethod = () => {
   //.pop method is used to pop a value off the end of an array.
@@ -212,7 +212,7 @@ const manipulateArraysWithPopMethod = () => {
   console.log(poppedElement);
   console.log(myArr); //this will show the updated myArr after the pop method has been used
 };
-manipulateArraysWithPopMethod();
+// manipulateArraysWithPopMethod();
 
 const manipulateArraysWithShiftMethod = () => {
   //shift method removes first element of array and shifts it to another array stored as a variable
@@ -220,7 +220,7 @@ const manipulateArraysWithShiftMethod = () => {
   const removedFromOurArray = ourArray.shift();
   console.log(removedFromOurArray);
 };
-manipulateArraysWithShiftMethod();
+// manipulateArraysWithShiftMethod();
 
 const manipulateArraysWithUnshiftMethod = () => {
   //unshift adds elements to the beginning of the array
@@ -229,7 +229,73 @@ const manipulateArraysWithUnshiftMethod = () => {
   ourArray.unshift("Happy");
   console.log(ourArray);
 };
-manipulateArraysWithUnshiftMethod();
+// manipulateArraysWithUnshiftMethod();
+
+const SHOPPING_LIST = () => {
+  // create a shopping list that's a multi-dimensional arr
+  const myList = [
+    ["Orange Juice", 7],
+    ["Kit-Kats", 24],
+    ["Lube", 103],
+    ["Draino", -1],
+    ["Watermelon", 3],
+    ["Microwave", 50],
+  ];
+  console.log(myList);
+};
+SHOPPING_LIST();
+
+const WRITE_REUSABLE_JAVASCRIPT_WITH_FUNCTIONS = () => {
+  // can INVOKE a function by using it's name followed by parentheses
+  // all code between curly braces {} will be executed each time the function is called
+  function reusableFunction() {
+    console.log("Hi World");
+  }
+
+  reusableFunction();
+};
+WRITE_REUSABLE_JAVASCRIPT_WITH_FUNCTIONS();
+
+const PASSING_VALUES_TO_FUNCTIONS_WITH_ARGUMENTS = () => {
+  // PARAMETERS are placeholders eg. function myFunc(val, obj) // myFunc is defined with two parameters
+  // ARGUMENTS are  the values passed into a function. example below
+  function myFunc(val, obj) {
+    console.log(val, obj);
+  }
+  myFunc(2, "someObject");
+
+  function addNumbers(num1, num2) {
+    console.log(num1 + num2);
+  }
+  addNumbers(5, 7);
+};
+PASSING_VALUES_TO_FUNCTIONS_WITH_ARGUMENTS();
+
+const RETURN_A_VALUE_FROM_A_FUNCTION_WITH_RETURN = () => {
+  // we just learned that you can pass values into a function with args
+  // we can also use a return statement to send a VALUE BACK OUT of a function
+  // example below
+  const EXAMPLE_ONE = () => {
+    function plusThree(num) {
+      return num + 3;
+      // now if I call plusThree with an argument of any number it will take that number and add 3
+    }
+    let result = plusThree(20);
+    console.log(result);
+  };
+  EXAMPLE_ONE();
+
+  const EXAMPLE_TWO = () => {
+    function timesFive(shit) {
+      let numbum = shit * 5;
+      return numbum;
+    }
+    let answer = timesFive(5);
+    console.log(answer);
+  };
+  EXAMPLE_TWO();
+};
+RETURN_A_VALUE_FROM_A_FUNCTION_WITH_RETURN();
 //
 //
 //
